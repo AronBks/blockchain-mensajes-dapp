@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10"
+  },
+  "dependencies": {
+    "ipfs-http-client": "^60.0.1",
+    "nft.storage": "^7.2.0"
+  }
+}
