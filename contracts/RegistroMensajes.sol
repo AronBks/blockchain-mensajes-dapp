@@ -19,12 +19,11 @@ contract RegistroMensajes {
 
     function registrarMensaje(string calldata _contenido, string calldata _archivoHash) external {
         require(bytes(_contenido).length > 0, "El mensaje no puede estar vacio");
-
+        // _archivoHash puede ser vacío o un CID de IPFS
         Estado estadoFinal = Estado.Confirmado;
         if (bytes(_contenido).length > 50) {
             estadoFinal = Estado.Pendiente;
         }
-
         mensajes.push(Mensaje({
             remitente: msg.sender,
             contenido: _contenido,
